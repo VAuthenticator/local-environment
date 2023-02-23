@@ -15,6 +15,7 @@ services:
     ports:
       - "4566-4599:4566-4599"
     environment:
+      - AWS_DEFAULT_REGION=us-east-1
       - SERVICES=s3,kms
   redis:
     image: redis

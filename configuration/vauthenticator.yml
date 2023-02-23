@@ -98,7 +98,6 @@ vauthenticator:
       cache:
         ttl: 1h
         name: client-application
-    keys.table-name: VAuthenticator_Keys_Local_Staging
     keys.signature.table-name: VAuthenticator_Signature_Keys_Local_Staging
     keys.mfa.table-name: VAuthenticator_Mfa_Keys_Local_Staging
     ticket.table-name: VAuthenticator_Ticket_Local_Staging
