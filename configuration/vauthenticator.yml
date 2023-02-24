@@ -76,7 +76,7 @@ management:
     health:
       show-details: ALWAYS
 key:
-  master-key: ${kms_key_id}
+  master-key: A_MASTER_KEY
 password:
   policy:
     minSize: 1
