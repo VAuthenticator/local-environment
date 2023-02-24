@@ -1,1 +1,11 @@
-tenant-installer
+.idea
+.idea/*
+
+/tenant-installer
+/tenant-installer/
+/tenant-installer/*
+
+/docker
+/docker/*
+
+*.logs

@@ -75,8 +75,6 @@ management:
       enabled: true
     health:
       show-details: ALWAYS
-key:
-  master-key: A_MASTER_KEY
 password:
   policy:
     minSize: 1
