@@ -1,6 +1,10 @@
 # tags variables
 common_resource_tags = {}
 
+# iam variables
+username = "vauthenticator"
+path = "/local-stage/"
+
 # dynamodb variables
 client_application_table_name  = "VAuthenticator_ClientApplication_Local_Staging"
 role_table_name                = "VAuthenticator_Role_Local_Staging"
@@ -16,9 +20,9 @@ document_s3_bucket_name = "vauthenticator"
 
 # kms variables
 key_name                      = "master_key"
-key_administrator_account_ids = []
+key_administrator_account_ids = ["arn:aws:iam::000000000000:user/local-stage/vauthenticator"]
 
-key_user_account_ids = []
+key_user_account_ids = ["arn:aws:iam::000000000000:user/local-stage/vauthenticator"]
 
 key_alias               = "vauthenticator-key"
 key_description         = "vauthenticator-key"

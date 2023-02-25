@@ -9,9 +9,11 @@ terraform {
 }
 
 provider "aws" {
-  region = "us-east-1"
+  region              = "us-east-1"
 
   endpoints {
+    iam      = "http://localhost:4566"
+    sts      = "http://localhost:4566"
     s3       = "http://localhost:4566"
     s3api    = "http://localhost:4566"
     kms      = "http://localhost:4566"
