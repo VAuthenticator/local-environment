@@ -15,22 +15,43 @@ vauthenticator app in local.
 - make sure that you have a clean installation 
   - docker-compose down  
   - docker-compose rm  
-  - clean if already there the docker folder on the project root. In this folder will be placed the dynamodb storage 
-
+  - 
+- create an .env file like this:
+  ````
+  ACCOUNT_ID=xxxx
+  VAUTHENTICATOR_BUCKET=xxxx
+  TF_STATE_BUCKET=xxxx
+  MASTER_KEY=will be available on the aws console or in the terraform resource apply console log 
+  AWS_REGION=xxxx
+  ````
 - run the setup.sh
   ```
-  After that the setup.sh is executed in the project root you should have a file called `kms.logs`. 
-  The content of this file is the master key to insert in the configuration
+  After that the setup.sh is executed in the AWS console on KMS section you can see the Key ID of your key. 
+  It is the master key to insert in the configuration
   file configuration/Fvauthenticator.yml.
-  Property name is: `key.master-key: ${A_MASTER_KEY}`
-  Property name is: `: ${VAUTHENTICATOR_DOCUMENTS_BUCKET}`
   ```
   
-- default dev credentials management ui:
-  - link:  http://local.management.vauthenticator.com:8080/secure/admin/index
-  - username: admin@email.com
-  - password: admin
-  - 
-- default dev credentials admin M2M client application :
-  - username: admin
-  - password: secret
+  - configure your app
+    - Property name is: `key.master-key: ${A_MASTER_KEY}`
+    - Property name is: `: ${VAUTHENTICATOR_DOCUMENTS_BUCKET}`
+    - create the IAM key and set up the required environment variables like below
+      ```
+      AWS_ACCESS_KEY_ID=xxxx
+      AWS_SECRET_ACCESS_KEY=xxxx
+      AWS_REGION=xxxx
+      ```
+  
+- run the init.sh: After that the init.sh is executed you will have configured.
+  - default admin client application for M2M:
+      - username: admin
+      - password: secret 
+  - default client application for configure the sso login for the admin ui:
+      - username: vauthenticator-management-ui
+      - password: secret 
+  - default management ui client application 
+    - link:  http://local.management.vauthenticator.com:8080/secure/admin/index
+    - username: admin@email.com
+    - password: admin
+
+
+- to reset all the environment use the ```./dispose.sh``` script
