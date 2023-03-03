@@ -4,13 +4,16 @@ oidcEndSessionUrl: ${vauthenticator.host}/oidc/logout
 auth.oidcIss: ${vauthenticator.host}
 postLogoutRedirectUri: http://local.management.vauthenticator.com:8080/secure/admin/index
 
+assetServer:
+  baseUrl: http://localhost:3001/asset
+
 spring:
   security:
     oauth2:
       client:
         registration:
           client:
-            client-id: local.vauthenticator-management-ui
+            client-id: vauthenticator-management-ui
             client-secret: secret
             client-name: VAuthenticator Management UI
             provider: vauthenticator

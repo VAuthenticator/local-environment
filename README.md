@@ -21,6 +21,16 @@ vauthenticator app in local.
   ```
   After that the setup.sh is executed in the project root you should have a file called `kms.logs`. 
   The content of this file is the master key to insert in the configuration
-  file [vauthenticator.yml](configuration%2Fvauthenticator.yml).
-  Property name is: `key.master-key: ${A_MASTE R_KEY}`
+  file configuration/Fvauthenticator.yml.
+  Property name is: `key.master-key: ${A_MASTER_KEY}`
+  Property name is: `: ${VAUTHENTICATOR_DOCUMENTS_BUCKET}`
   ```
+  
+- default dev credentials management ui:
+  - link:  http://local.management.vauthenticator.com:8080/secure/admin/index
+  - username: admin@email.com
+  - password: admin
+  - 
+- default dev credentials admin M2M client application :
+  - username: admin
+  - password: secret

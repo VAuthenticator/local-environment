@@ -8,9 +8,6 @@ auth.oidcIss: ${vauthenticator.host}
 assetServer:
   baseUr: http://local.assets.vauthenticator.com:3000/asset
 
-document:
-  bucket-name: vauthenticator
-
 event:
   consumer:
     enable:
@@ -102,10 +99,10 @@ vauthenticator:
     mfa_account_methods.table-name: VAuthenticator_Mfa_Account_Methods_Local_Staging
 iamUserAwsCredentialsProvider: true
 
-aws:
-  s3:
-    endpointOverride: http://localhost:4566
-  kms:
-    endpointOverride: http://localhost:4566
-  dynamodb:
-    endpointOverride: http://localhost:8000
+#aws:
+#  s3:
+#    endpointOverride: http://localhost:4566
+#  kms:
+#    endpointOverride: http://localhost:4566
+#  dynamodb:
+#    endpointOverride: http://localhost:8000

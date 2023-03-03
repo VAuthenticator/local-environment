@@ -1,0 +1,5 @@
+source .env
+
+cd tenant-installer/scripts
+pip3 install -r requirements.txt
+python3 setup.py admin@email.com $MASTER_KEY  VAuthenticator_Signature_Keys_Local_Staging  VAuthenticator_Role_Local_Staging VAuthenticator_Account_Local_Staging  VAuthenticator_Account_Role_Local_Staging VAuthenticator_ClientApplication_Local_Staging
