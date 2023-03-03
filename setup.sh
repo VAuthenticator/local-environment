@@ -8,7 +8,6 @@ source .env
 
 TEMPLATES=("welcome.html" "mail-verify-challenge.html" "reset-password.html" "successful-mail-verify.html" "mfa-challenge.html")
 
-git clone https://github.com/VAuthenticator/tenant-installer.git
 cd tenant-installer/terraform/
 
 # IAM
@@ -34,7 +33,7 @@ terraform plan -var-file=variables.tfvars
 terraform apply -var-file=variables.tfvars -auto-approve
 
 
-cd ../../document/template/mail
+cd ../document/template/mail
 for TEMPLATE in ${TEMPLATES[@]}
 do
   aws s3 cp $TEMPLATE s3://$VAUTHENTICATOR_BUCKET/mail/templates/$TEMPLATE

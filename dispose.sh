@@ -6,9 +6,7 @@ function copy_tf_variables() {
 rm -rf tenant-installer
 source .env
 
-git clone https://github.com/VAuthenticator/tenant-installer.git
 cd tenant-installer/terraform/
-
 
 cd policy
 copy_tf_variables

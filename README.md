@@ -1,5 +1,6 @@
 # local-environment
 
+Make sure to have on the root project a folder called tenant-installer with teh content on the relative version of the [tenant-installer project](https://github.com/VAuthenticator/tenant-installer).
 The project is composed by a docker-compose yml designed to provide you all the basic infrastructure to start
 vauthenticator app in local.
 
