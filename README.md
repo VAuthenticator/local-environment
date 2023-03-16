@@ -10,6 +10,7 @@ vauthenticator app in local.
 
     ```
     127.0.0.1   local.assets.vauthenticator.com
+    127.0.0.1   local.assets.management.vauthenticator.com
     127.0.0.1   local.api.vauthenticator.com
     127.0.0.1   local.management.vauthenticator.com
     ```

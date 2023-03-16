@@ -5,7 +5,7 @@ auth.oidcIss: ${vauthenticator.host}
 postLogoutRedirectUri: http://local.management.vauthenticator.com:8080/secure/admin/index
 
 assetServer:
-  baseUrl: http://localhost:3001/asset
+  baseUrl: http://local.management.vauthenticator.com:3001/asset
 
 spring:
   security:
