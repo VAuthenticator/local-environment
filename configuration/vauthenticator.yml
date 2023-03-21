@@ -1,12 +1,6 @@
-features:
-  mail-sender-enabled: true
-
 endSessionWithoutDiscovery: true
 oidcEndSessionUrl: ${vauthenticator.host}/oidc/logout
 auth.oidcIss: ${vauthenticator.host}
-
-assetServer:
-  baseUrl: http://local.assets.vauthenticator.com:3000/asset
 
 event:
   consumer:
@@ -98,11 +92,3 @@ vauthenticator:
     ticket.table-name: VAuthenticator_Ticket_Local_Staging
     mfa_account_methods.table-name: VAuthenticator_Mfa_Account_Methods_Local_Staging
 iamUserAwsCredentialsProvider: true
-
-#aws:
-#  s3:
-#    endpointOverride: http://localhost:4566
-#  kms:
-#    endpointOverride: http://localhost:4566
-#  dynamodb:
-#    endpointOverride: http://localhost:8000
