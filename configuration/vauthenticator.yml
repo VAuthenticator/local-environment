@@ -71,6 +71,11 @@ password:
     minSize: 1
     minSpecialSymbol: 1
 
+asset-server:
+  on-s3:
+    cache:
+      ttl: 10s
+
 vauthenticator:
   host: http://local.api.vauthenticator.com:9090
 
@@ -78,14 +83,14 @@ vauthenticator:
     account:
       table-name: VAuthenticator_Account_Local_Staging
       cache:
-        ttl: 1h
+        ttl: 10s
         name: account
       role.table-name: VAuthenticator_Account_Role_Local_Staging
     role.table-name: VAuthenticator_Role_Local_Staging
     client-application:
       table-name: VAuthenticator_ClientApplication_Local_Staging
       cache:
-        ttl: 1h
+        ttl: 10s
         name: client-application
     keys.signature.table-name: VAuthenticator_Signature_Keys_Local_Staging
     keys.mfa.table-name: VAuthenticator_Mfa_Keys_Local_Staging

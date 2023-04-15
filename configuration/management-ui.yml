@@ -20,6 +20,8 @@ spring:
               - email
               - admin:key-reader
               - admin:key-editor
+              - admin:mail-template-writer
+              - admin:mail-template-reader
             redirect-uri: http://local.management.vauthenticator.com:8080/login/oauth2/code/client
             authorization-grant-type: authorization_code
         provider:
